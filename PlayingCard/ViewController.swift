@@ -41,12 +41,6 @@ class ViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
-//		var card = deck.draw()
-//		while card != nil {
-//			print("\(card!)")
-//			card = deck.draw()
-//		}
 	}
 
 

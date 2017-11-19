@@ -180,12 +180,12 @@ extension CGPoint {
 }
 
 extension CGRect {
-	func zoom(by modifier: CGFloat) -> CGRect {
-		let width = size.width * modifier
-		let height = size.height * modifier
-		let originX = origin.x + (size.width - width) / 2
-		let originY = origin.y + (size.height - height) / 2
-		return CGRect(origin: CGPoint(x: originX,y: originY) , size: CGSize(width: width, height: height))
+	func zoom(by zoomFactor: CGFloat) -> CGRect {
+		let zoomedWidth = size.width * zoomFactor
+		let zoomedHeight = size.height * zoomFactor
+		let originX = origin.x + (size.width - zoomedWidth) / 2
+		let originY = origin.y + (size.height - zoomedHeight) / 2
+		return CGRect(origin: CGPoint(x: originX,y: originY) , size: CGSize(width: zoomedWidth, height: zoomedHeight))
 	}
 	
 	var leftHalf: CGRect {
