@@ -22,15 +22,20 @@
                             <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="lGM-Ch-lKd" customClass="PlayingCardView" customModule="Lecture_6___PlayingCard" customModuleProvider="target">
                                 <rect key="frame" x="16" y="136.66666666666669" width="343" height="548.66666666666652"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="lGM-Ch-lKd" secondAttribute="height" multiplier="5:8" id="dbT-0B-0cw"/>
                                     <constraint firstAttribute="width" priority="750" constant="800" id="zsp-X1-jLI"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="rank">
-                                        <integer key="value" value="2"/>
+                                        <integer key="value" value="6"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="suit" value="♥️"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="suq-Zr-5Ty" appends="YES" id="gNk-QR-awY"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" cyan="0.03222370520234108" magenta="0.037519440054893494" yellow="0.3644370436668396" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
@@ -44,8 +49,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="playingCardView" destination="lGM-Ch-lKd" id="1Ih-bC-Oyf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="suq-Zr-5Ty">
+                    <connections>
+                        <action selector="flipCard:" destination="BYZ-38-t0r" id="oM7-nR-w8N"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
