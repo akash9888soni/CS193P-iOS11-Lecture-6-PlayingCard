@@ -70,9 +70,8 @@ class PlayingCardView: UIView {
 		configureLabel(upperLeftCornerLabel)
 		upperLeftCornerLabel.frame.origin = bounds.origin.offsetBy(dx: cornerOffset, dy: cornerOffset)
 		configureLabel(lowerRightCornerLabel)
-		lowerRightCornerLabel.transform = CGAffineTransform.identity
-			.translatedBy(x: lowerRightCornerLabel.frame.size.width, y: lowerRightCornerLabel.frame.size.height)
-			.rotated(by: CGFloat.pi)
+		        lowerRightCornerLabel.transform = CGAffineTransform.identity
+            .rotated(by: CGFloat.pi)
 		lowerRightCornerLabel.frame.origin = CGPoint(x: bounds.maxX, y: bounds.maxY)
 			.offsetBy(dx: -cornerOffset, dy: -cornerOffset)
 			.offsetBy(dx: -lowerRightCornerLabel.frame.width, dy: -lowerRightCornerLabel.frame.height)
